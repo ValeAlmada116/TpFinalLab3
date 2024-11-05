@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/IMG_9026.PNG" alt="logo" width="50" height="50">
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor-tabla">
+           
+            <h1>Nueva Categoria</h1>
+          <form class="formNuevaCat">
+                <input type="text" id="nombreCategoria" placeholder="Ingrese una categoria" required>
+                <input type="text" id="cantidadDeProd" placeholder="Ingrese cantidad de productos" required>
+                <button type="button" class="btn btnAgregarNuevCat" onclick="CrearNuevaCategoria()">Agregar Categoria</button>
+          </form>
+           
+
+         
+          <form id="formModificar" class="formModificar" style="display: none;" >
+                <input type="text" id="nuevoIdcod" placeholder="Ingrese un nuevo id">
+                <input type="text" id="nuevaCategoria" placeholder="Ingrese una categoria" required>            
+                <input type="number" id="nuevaCantidadDeProd" placeholder="Ingrese cantidad de productos" required>
+                <button  class="btn btnModificar2"onclick="Modificar('nuevoIdCod', 'nuevaCategoria', 'nuevaCantidadDeProd')">Modificar</button>                
+          </form>
+                    
+          <div class="tablaCategorias">
+              <table>
+                   <thead>
+                       <tr class="header">
+                          <th>Id</th>
+                          <th>Categoria</th>
+                          <th>Cantidad de productos</th>
+                          <th>Acciones</th>
+                       </tr>
+                   </thead>
+                      <tbody id="tablaCategorias">
+
+                      </tbody>
+              </table>
+          </div>
+          
+       </section>
+
+    </main>
+
+    <footer>
+        <div class="contenido-footer">
+            <p class="sanFco">San Francisco, Córdoba</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/creative.rent?igsh=MXFyaXYzdXB0Nnh6dA==">
+                    <img src="img/Instagram_icon-icons.com_66804.ico" alt="instagram">
+                </a>
+                <a href="https://wa.me/message/NHCUW33OFUAQD1">
+                    <img src="img/whatsapp_icon-icons.com_62756.ico" alt="whatsapp">
+                </a>
+            </div>          
+        </div>
+    </footer>
+    <script src="categorias.js"></script>
+</body>
+</html>
